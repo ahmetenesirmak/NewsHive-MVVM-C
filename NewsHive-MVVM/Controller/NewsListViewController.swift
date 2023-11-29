@@ -10,7 +10,7 @@ import UIKit
 class NewsListViewController: UIViewController {
     
     //MARK: - Property
-
+    
     //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
