@@ -56,15 +56,71 @@
 		CDACD9712B1731D3000982FA /* NewsHive-MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				CDACD9722B1731D3000982FA /* AppDelegate.swift */,
-				CDACD9742B1731D3000982FA /* SceneDelegate.swift */,
-				CDACD9762B1731D3000982FA /* ViewController.swift */,
-				CDACD9782B1731D3000982FA /* Main.storyboard */,
-				CDACD97B2B1731D5000982FA /* Assets.xcassets */,
-				CDACD97D2B1731D5000982FA /* LaunchScreen.storyboard */,
+				CDACD98C2B17331C000982FA /* Network */,
+				CDACD98B2B17330F000982FA /* Model */,
+				CDACD98A2B173307000982FA /* ViewModel */,
+				CDACD9892B1732FE000982FA /* Storyboard */,
+				CDACD9882B1732F7000982FA /* Controller */,
+				CDACD9872B1732F2000982FA /* App */,
+				CDACD9862B1732EB000982FA /* Util */,
 				CDACD9802B1731D5000982FA /* Info.plist */,
 			);
 			path = "NewsHive-MVVM";
+			sourceTree = "<group>";
+		};
+		CDACD9862B1732EB000982FA /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CDACD97B2B1731D5000982FA /* Assets.xcassets */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CDACD9872B1732F2000982FA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CDACD9722B1731D3000982FA /* AppDelegate.swift */,
+				CDACD9742B1731D3000982FA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CDACD9882B1732F7000982FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CDACD9762B1731D3000982FA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CDACD9892B1732FE000982FA /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CDACD97D2B1731D5000982FA /* LaunchScreen.storyboard */,
+				CDACD9782B1731D3000982FA /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CDACD98A2B173307000982FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDACD98B2B17330F000982FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDACD98C2B17331C000982FA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
