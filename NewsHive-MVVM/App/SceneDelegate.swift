@@ -18,9 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
+        
         let storyboard = UIStoryboard(name: "News", bundle: nil)
-        let mainPage = storyboard.instantiateViewController(withIdentifier: "NewsListViewController") as! NewsListViewController
-        window?.rootViewController = mainPage
+        let view = storyboard.instantiateViewController(withIdentifier: "NewsListViewController") as! NewsListViewController
+        let navigationController = UINavigationController(rootViewController: view)
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

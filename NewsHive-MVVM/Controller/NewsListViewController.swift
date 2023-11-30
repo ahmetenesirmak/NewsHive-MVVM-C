@@ -21,12 +21,17 @@ class NewsListViewController: UIViewController, NewsViewModelDelegate {
         configureTableView()
         registerTableViewCell()
         setupViewModel()
+        configureNavigationController()
         newsListViewModel.fetchNewsList()
     }
     
 
     //MARK: - Function
-    func setupViewModel() {
+    private func configureNavigationController() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    private func setupViewModel() {
         newsListViewModel = NewsListViewModel()
         newsListViewModel.delegate = self
     }

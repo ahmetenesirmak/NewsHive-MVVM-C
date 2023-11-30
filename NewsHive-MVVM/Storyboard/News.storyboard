@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--News List View Controller-->
+        <!--NewsHive-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="NewsListViewController" id="Y6W-OH-hqX" customClass="NewsListViewController" customModule="NewsHive_MVVM" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bX5-nW-i4c">
-                                <rect key="frame" x="0.0" y="48" width="414" height="848"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -27,16 +27,17 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bX5-nW-i4c" secondAttribute="trailing" id="0e1-y6-j4m"/>
                             <constraint firstAttribute="bottom" secondItem="bX5-nW-i4c" secondAttribute="bottom" id="L7X-EL-jFQ"/>
                             <constraint firstItem="bX5-nW-i4c" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NDe-gv-CTT"/>
-                            <constraint firstItem="bX5-nW-i4c" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rgZ-ts-hLX"/>
+                            <constraint firstItem="bX5-nW-i4c" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="rgZ-ts-hLX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="NewsHive" id="3za-JR-KH1"/>
                     <connections>
                         <outlet property="tableView" destination="bX5-nW-i4c" id="sGF-bW-sV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="4"/>
+            <point key="canvasLocation" x="1028.985507246377" y="3.3482142857142856"/>
         </scene>
         <!--News Detail View Controller-->
         <scene sceneID="DlA-w8-R2a">
@@ -51,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbg-51-SdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="4"/>
+            <point key="canvasLocation" x="1869.5652173913045" y="3.3482142857142856"/>
         </scene>
     </scenes>
     <resources>
