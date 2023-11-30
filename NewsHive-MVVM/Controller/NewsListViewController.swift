@@ -7,9 +7,10 @@
 
 import UIKit
 
-class NewsListViewController: UIViewController {
+class NewsListViewController: UIViewController, NewsViewModelDelegate {
     
     //MARK: - Property
+    var newsListViewModel: NewsListViewModel!
     
     //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
@@ -19,10 +20,23 @@ class NewsListViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         registerTableViewCell()
+        setupViewModel()
+        newsListViewModel.fetchNewsList()
     }
     
 
     //MARK: - Function
+    func setupViewModel() {
+        newsListViewModel = NewsListViewModel()
+        newsListViewModel.delegate = self
+    }
+    
+    func dataUpdated() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,23 +52,24 @@ class NewsListViewController: UIViewController {
 extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return newsListViewModel.numberOfSections
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return newsListViewModel.numberOfRowsInSection(section)
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListTableViewCell", for: indexPath) as! NewsListTableViewCell
         
+        let newsVM = self.newsListViewModel.newsAtIndex(indexPath.row)
+        cell.bind(newsImageURL: newsVM.urlToImage, newsTitle: newsVM.title)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
     
 }

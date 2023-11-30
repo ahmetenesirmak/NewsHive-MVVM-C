@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NewsListTableViewCell: UITableViewCell {
 
@@ -21,6 +22,11 @@ class NewsListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func bind(newsImageURL: URL? = nil, newsTitle: String) {
+        self.newsTitle.text = newsTitle
+        self.newsImage.kf.setImage(with: newsImageURL)
     }
     
 }
