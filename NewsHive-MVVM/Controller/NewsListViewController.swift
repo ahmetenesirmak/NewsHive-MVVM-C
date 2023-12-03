@@ -7,10 +7,11 @@
 
 import UIKit
 
-class NewsListViewController: UIViewController, NewsViewModelDelegate {
+class NewsListViewController: UIViewController, NewsListViewModelDelegate {
     
     //MARK: - Property
     var newsListViewModel: NewsListViewModel!
+    weak var mainCoordinator: MainCoordinator?
     
     //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
@@ -21,16 +22,11 @@ class NewsListViewController: UIViewController, NewsViewModelDelegate {
         configureTableView()
         registerTableViewCell()
         setupViewModel()
-        configureNavigationController()
         newsListViewModel.fetchNewsList()
     }
     
 
     //MARK: - Function
-    private func configureNavigationController() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
     private func setupViewModel() {
         newsListViewModel = NewsListViewModel()
         newsListViewModel.delegate = self
@@ -76,5 +72,11 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        mainCoordinator?.showDetails(of: newsListViewModel.newsList[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
 }

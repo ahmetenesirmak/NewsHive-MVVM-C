@@ -7,17 +7,12 @@
 
 import Foundation
 
-//MARK: - Protocol
-protocol NewsViewModelDelegate {
-    func dataUpdated()
-}
-
 //MARK: - NewsListViewModel
 class NewsListViewModel {
     
     var newsList: [News] = []
     let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=6713bba1da9f4f558790e1847696f11a")!
-    var delegate: NewsViewModelDelegate?
+    var delegate: NewsListViewModelDelegate?
 }
 
 extension NewsListViewModel {
@@ -27,10 +22,10 @@ extension NewsListViewModel {
     }
     
     func fetchNewsList() {
-        NewsWebService().getArticles(url: url) { newsList in
+        NewsWebService().getArticles(url: url) { [weak self] newsList in
             if let newsList = newsList {
-                self.newsList = newsList
-                self.delegate?.dataUpdated()
+                self?.newsList = newsList
+                self?.delegate?.dataUpdated()
             }
         }
     }

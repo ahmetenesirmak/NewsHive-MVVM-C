@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class NewsDetailViewModel {
+    
+    var selectedNews: News?
+    
+    init(selectedNews: News) {
+        self.selectedNews = selectedNews
+    }
+
+}

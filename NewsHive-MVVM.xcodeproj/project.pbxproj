@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CD79177C2B185EA3007ED1E9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CD79177B2B185EA3007ED1E9 /* Kingfisher */; };
+		CD79177E2B18AE76007ED1E9 /* Contracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD79177D2B18AE76007ED1E9 /* Contracts.swift */; };
+		CD7917802B18AF11007ED1E9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD79177F2B18AF11007ED1E9 /* Coordinator.swift */; };
 		CDACD9732B1731D3000982FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDACD9722B1731D3000982FA /* AppDelegate.swift */; };
 		CDACD9752B1731D3000982FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDACD9742B1731D3000982FA /* SceneDelegate.swift */; };
 		CDACD97C2B1731D5000982FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDACD97B2B1731D5000982FA /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD79177D2B18AE76007ED1E9 /* Contracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contracts.swift; sourceTree = "<group>"; };
+		CD79177F2B18AF11007ED1E9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CDACD96F2B1731D3000982FA /* NewsHive-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NewsHive-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDACD9722B1731D3000982FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDACD9742B1731D3000982FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,12 +79,14 @@
 				CDACD98C2B17331C000982FA /* Network */,
 				CDACD98B2B17330F000982FA /* Model */,
 				CDACD98A2B173307000982FA /* ViewModel */,
-				CDACD9892B1732FE000982FA /* Storyboard */,
 				CDACD9882B1732F7000982FA /* Controller */,
+				CDACD9892B1732FE000982FA /* Storyboard */,
 				CDACD9992B1733EF000982FA /* Cell */,
 				CDACD9872B1732F2000982FA /* App */,
 				CDACD9862B1732EB000982FA /* Util */,
 				CDACD9802B1731D5000982FA /* Info.plist */,
+				CD79177D2B18AE76007ED1E9 /* Contracts.swift */,
+				CD79177F2B18AF11007ED1E9 /* Coordinator.swift */,
 			);
 			path = "NewsHive-MVVM";
 			sourceTree = "<group>";
@@ -238,8 +244,10 @@
 				CDACD98E2B17337E000982FA /* NewsEntity.swift in Sources */,
 				CDACD9732B1731D3000982FA /* AppDelegate.swift in Sources */,
 				CDACD9962B1733CF000982FA /* NewsListViewController.swift in Sources */,
+				CD7917802B18AF11007ED1E9 /* Coordinator.swift in Sources */,
 				CDACD9752B1731D3000982FA /* SceneDelegate.swift in Sources */,
 				CDACD9902B17338C000982FA /* NewsWebService.swift in Sources */,
+				CD79177E2B18AE76007ED1E9 /* Contracts.swift in Sources */,
 				CDACD9922B17339B000982FA /* NewsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

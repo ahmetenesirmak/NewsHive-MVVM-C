@@ -47,7 +47,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QYv-nt-cWx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QYv-nt-cWx">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="HEM-D3-rlL"/>
@@ -56,14 +56,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7gj-Wc-Nyn">
                                 <rect key="frame" x="10" y="410" width="394" height="442"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Global News App Relased" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="MqX-d5-Azn">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Global News App Relased" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="MqX-d5-Azn">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="82"/>
                                         <fontDescription key="fontDescription" name="Avenir-BlackOblique" family="Avenir" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r2k-BO-eyN">
-                                        <rect key="frame" x="0.0" y="47" width="394" height="25"/>
+                                        <rect key="frame" x="0.0" y="97" width="394" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Hive" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Wy4-N3-o3V">
                                                 <rect key="frame" x="0.0" y="0.0" width="197" height="25"/>
@@ -86,9 +86,9 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCY-HI-VPK">
-                                        <rect key="frame" x="0.0" y="87" width="394" height="300"/>
+                                        <rect key="frame" x="0.0" y="137" width="394" height="250"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="Mfq-7R-uoB"/>
+                                            <constraint firstAttribute="height" constant="250" id="Mfq-7R-uoB"/>
                                         </constraints>
                                         <string key="text">   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan, mauris eget vehicula auctor, est augue posuere nibh, et hendrerit sapien mi non dui. Praesent vitae rhoncus nunc. Nullam mauris tellus, auctor id sem sed, auctor dignissim justo. Nam venenatis neque dapibus feugiat efficitur. Curabitur rutrum, turpis vitae venenatis dictum, urna ante mattis quam, scelerisque porttitor quam velit sed tellus. Aenean a ligula in turpisLorem ipsum dolor sit amet, consectetur adipiscing elivitae rhoncus nunc. Nullam mauris tellus, auctor id sem sed, auctor dignissim justo. Nam venenatis neque dapibus feugiat efficitur. Curabitur t. Sed accumsan, mauris eget vehicula auctor, est augue posuere nibh, et hendrerit sapien mi non dui. Praesent vitae rhoncus nunc. dapibus feugiat efficitur. Curabitur rutrum, turpis vitae venenatis dictum, urna ante mattis quam, scelerisque porttitor quam velit sed tellus. Aenean a ligula in turpis</string>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
@@ -105,6 +105,9 @@
                                                 <buttonConfiguration key="configuration" style="tinted" title="Back">
                                                     <color key="baseBackgroundColor" red="0.4039215686" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="backButtonTapped:" destination="Ba2-AO-exU" eventType="touchUpInside" id="yRa-5w-Bwh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwl-WJ-0cQ">
                                                 <rect key="frame" x="202" y="0.0" width="192" height="40"/>
@@ -113,6 +116,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Read More">
                                                     <color key="baseBackgroundColor" red="0.23529411759999999" green="0.1647058824" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="readMoreButtonTapped:" destination="Ba2-AO-exU" eventType="touchUpInside" id="j4c-ks-r6Z"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -135,6 +141,13 @@
                             <constraint firstItem="xI7-fO-nxH" firstAttribute="bottom" secondItem="7gj-Wc-Nyn" secondAttribute="bottom" constant="10" id="ysP-bP-bvu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newsDetailAuthor" destination="Wy4-N3-o3V" id="VuA-at-gHo"/>
+                        <outlet property="newsDetailDescription" destination="VCY-HI-VPK" id="c2C-n1-ZU2"/>
+                        <outlet property="newsDetailImage" destination="QYv-nt-cWx" id="HSB-WH-tdk"/>
+                        <outlet property="newsDetailPublicationDate" destination="arq-Yx-PrO" id="2rx-mc-ND7"/>
+                        <outlet property="newsDetailTitle" destination="MqX-d5-Azn" id="kQ2-mg-lsH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbg-51-SdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
